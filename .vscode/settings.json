@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"cmath": "cpp",
+		"*.tcc": "c",
+		"random": "c",
+		"numbers": "c",
+		"methodes.h": "c",
+		"compare": "cpp"
+	}
+}

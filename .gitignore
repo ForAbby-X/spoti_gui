@@ -1,0 +1,8 @@
+
+# C
+obj/
+./*.out
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
