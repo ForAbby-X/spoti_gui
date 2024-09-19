@@ -2,54 +2,36 @@
 #ifndef GUI_CONTAINER_H
 #define GUI_CONTAINER_H
 
-#include <stdint.h>
-#include "math_vec/types.h"
-#include "vector.h"
+#include "gui/container_struct.h"
+#include "gui/element.h"
 
-#define GUI_TITLE_MAX_LEN 32
 
-#define GUI_BASE_OPTIONS  GUI_IS_MOVABLE \
-						| GUI_IS_RESIZABLE \
-						| GUI_IS_TITLE_BAR_VISIBLE \
-						| GUI_IS_BACKGROUND_VISIBLE \
-						| GUI_IS_INTERACTIVE
+/* On success return the uuid of the container, otherwise an integer value of 0. */
+uint16_t				gui_container_init(gui_container *gui_container);
+void					gui_container_destroy(gui_container *gui_container);
 
-typedef int						gui_surface; // temporary place holder for compiling
-typedef struct gui_container	gui_container;
-typedef uint32_t				gui_options;
+void					gui_container_set_title(gui_container *gui_container, char *title);
 
-int		gui_container_init(gui_container *gui_container);
-void	gui_container_destroy(gui_container *gui_container);
+/* Return the modified container option flags.
+ * @note Later i should make it return an error statuts...
+ */
+gui_container_options	gui_container_add_options(gui_container *gui_container, gui_container_options options);
 
-void	gui_container_set_title(gui_container *gui_container, char *title);
-int		gui_container_set_options(gui_container *gui_container, gui_options options);
-int		gui_container_get_options(gui_container *gui_container, gui_options options);
+/* Return the modified container option flags.
+ * @note Later i should make it return an error statuts...
+ */
+gui_container_options	gui_container_rem_options(gui_container *gui_container, gui_container_options options);
 
-struct gui_container
-{
-	uint16_t	id;
-	
-	v2ui		position;
-	uint16_t	layer;
-	v2ui		size;
-	
-	char 		title[GUI_TITLE_MAX_LEN];
-	gui_options	options;
-	
-	gui_surface	surface; // to store the texture of the container
-	t_vector	childs;	// vector(gui_container *child) or vector(uint16_t ids)
-};
+/* Return the uuid of the new elemnt on success, otherwise return an integer value of 0. */
+uint16_t				gui_container_add_element(gui_container *gui_container, gui_element_type type, void *arg);
+void					gui_container_rem_element(gui_container *gui_container, uint16_t uuid);
 
-/* max options nb 32 - 1 (last option) */
-enum gui_options
-{
-	GUI_IS_MOVABLE				= 1 << 0,
-	GUI_IS_RESIZABLE			= 1 << 1,
-	GUI_IS_TITLE_BAR_VISIBLE	= 1 << 2,
-	GUI_IS_BACKGROUND_VISIBLE	= 1 << 3,
-	GUI_IS_INTERACTIVE			= 1 << 4,
+int						gui_container_update(gui_container *gui_container, void *arg);
 
-	GUI_LAST_OPTIONS
-};
+/*
+ *	Return the screen space position of the element.
+ *	@warning ! call only once per element update !
+ */
+v2ui					gui_container_element_offset(gui_container *gui_container, gui_element *element);
 
 #endif

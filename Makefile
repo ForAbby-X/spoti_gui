@@ -129,6 +129,126 @@ gui_test.out/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/build
 .PHONY : gui_test.out/fast
 
+src/gui/container.o: src/gui/container.c.o
+.PHONY : src/gui/container.o
+
+# target to build an object file
+src/gui/container.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/container.c.o
+.PHONY : src/gui/container.c.o
+
+src/gui/container.i: src/gui/container.c.i
+.PHONY : src/gui/container.i
+
+# target to preprocess a source file
+src/gui/container.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/container.c.i
+.PHONY : src/gui/container.c.i
+
+src/gui/container.s: src/gui/container.c.s
+.PHONY : src/gui/container.s
+
+# target to generate assembly for a file
+src/gui/container.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/container.c.s
+.PHONY : src/gui/container.c.s
+
+src/gui/element.o: src/gui/element.c.o
+.PHONY : src/gui/element.o
+
+# target to build an object file
+src/gui/element.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element.c.o
+.PHONY : src/gui/element.c.o
+
+src/gui/element.i: src/gui/element.c.i
+.PHONY : src/gui/element.i
+
+# target to preprocess a source file
+src/gui/element.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element.c.i
+.PHONY : src/gui/element.c.i
+
+src/gui/element.s: src/gui/element.c.s
+.PHONY : src/gui/element.s
+
+# target to generate assembly for a file
+src/gui/element.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element.c.s
+.PHONY : src/gui/element.c.s
+
+src/gui/element/none.o: src/gui/element/none.c.o
+.PHONY : src/gui/element/none.o
+
+# target to build an object file
+src/gui/element/none.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element/none.c.o
+.PHONY : src/gui/element/none.c.o
+
+src/gui/element/none.i: src/gui/element/none.c.i
+.PHONY : src/gui/element/none.i
+
+# target to preprocess a source file
+src/gui/element/none.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element/none.c.i
+.PHONY : src/gui/element/none.c.i
+
+src/gui/element/none.s: src/gui/element/none.c.s
+.PHONY : src/gui/element/none.s
+
+# target to generate assembly for a file
+src/gui/element/none.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element/none.c.s
+.PHONY : src/gui/element/none.c.s
+
+src/gui/element/text.o: src/gui/element/text.c.o
+.PHONY : src/gui/element/text.o
+
+# target to build an object file
+src/gui/element/text.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element/text.c.o
+.PHONY : src/gui/element/text.c.o
+
+src/gui/element/text.i: src/gui/element/text.c.i
+.PHONY : src/gui/element/text.i
+
+# target to preprocess a source file
+src/gui/element/text.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element/text.c.i
+.PHONY : src/gui/element/text.c.i
+
+src/gui/element/text.s: src/gui/element/text.c.s
+.PHONY : src/gui/element/text.s
+
+# target to generate assembly for a file
+src/gui/element/text.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element/text.c.s
+.PHONY : src/gui/element/text.c.s
+
+src/random.o: src/random.c.o
+.PHONY : src/random.o
+
+# target to build an object file
+src/random.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/random.c.o
+.PHONY : src/random.c.o
+
+src/random.i: src/random.c.i
+.PHONY : src/random.i
+
+# target to preprocess a source file
+src/random.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/random.c.i
+.PHONY : src/random.c.i
+
+src/random.s: src/random.c.s
+.PHONY : src/random.s
+
+# target to generate assembly for a file
+src/random.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/random.c.s
+.PHONY : src/random.c.s
+
 src/vec2f_test.o: src/vec2f_test.c.o
 .PHONY : src/vec2f_test.o
 
@@ -162,6 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... gui_test.out"
+	@echo "... src/gui/container.o"
+	@echo "... src/gui/container.i"
+	@echo "... src/gui/container.s"
+	@echo "... src/gui/element.o"
+	@echo "... src/gui/element.i"
+	@echo "... src/gui/element.s"
+	@echo "... src/gui/element/none.o"
+	@echo "... src/gui/element/none.i"
+	@echo "... src/gui/element/none.s"
+	@echo "... src/gui/element/text.o"
+	@echo "... src/gui/element/text.i"
+	@echo "... src/gui/element/text.s"
+	@echo "... src/random.o"
+	@echo "... src/random.i"
+	@echo "... src/random.s"
 	@echo "... src/vec2f_test.o"
 	@echo "... src/vec2f_test.i"
 	@echo "... src/vec2f_test.s"

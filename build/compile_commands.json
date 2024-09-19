@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/projects/spoti_gui/build",
+  "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/vec2f_test.c.o -c /projects/spoti_gui/src/vec2f_test.c",
+  "file": "/projects/spoti_gui/src/vec2f_test.c"
+},
+{
+  "directory": "/projects/spoti_gui/build",
+  "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/random.c.o -c /projects/spoti_gui/src/random.c",
+  "file": "/projects/spoti_gui/src/random.c"
+},
+{
+  "directory": "/projects/spoti_gui/build",
+  "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/gui/container.c.o -c /projects/spoti_gui/src/gui/container.c",
+  "file": "/projects/spoti_gui/src/gui/container.c"
+},
+{
+  "directory": "/projects/spoti_gui/build",
+  "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/gui/element.c.o -c /projects/spoti_gui/src/gui/element.c",
+  "file": "/projects/spoti_gui/src/gui/element.c"
+},
+{
+  "directory": "/projects/spoti_gui/build",
+  "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/gui/element/none.c.o -c /projects/spoti_gui/src/gui/element/none.c",
+  "file": "/projects/spoti_gui/src/gui/element/none.c"
+},
+{
+  "directory": "/projects/spoti_gui/build",
+  "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/gui/element/text.c.o -c /projects/spoti_gui/src/gui/element/text.c",
+  "file": "/projects/spoti_gui/src/gui/element/text.c"
+}
+]

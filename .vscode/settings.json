@@ -5,6 +5,21 @@
 		"random": "c",
 		"numbers": "c",
 		"methodes.h": "c",
-		"compare": "cpp"
+		"compare": "cpp",
+		"array": "c",
+		"concepts": "c",
+		"string": "c",
+		"unordered_map": "c",
+		"memory": "c",
+		"string_view": "c",
+		"ostream": "c",
+		"streambuf": "c",
+		"functional": "c",
+		"tuple": "c",
+		"bit": "c",
+		"memory_resource": "c",
+		"type_traits": "c",
+		"element.h": "c",
+		"container_struct.h": "c"
 	}
 }

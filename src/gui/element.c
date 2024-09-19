@@ -1,24 +1,80 @@
 
 #include "gui/element.h"
+#include "gui/methodes.h"
+#include "gui/container.h"
+#include "random.h"
+#include "engine.h"
 
-int			gui_element_init(gui_element *element, uint16_t type)
+uint16_t gui_element_init(gui_element *element, gui_element_type type, void *arg)
 {
-	element->id = my_rand_u32() & 0xFFFF;
-	element->type = 
+	element->uuid = my_rand_u32() & 0x0FFF;
+
+	element->type = type;
+	element->size = (v2ui){70, 30};
+	element->options = 0;
+
+	if (global_element_methods_table[type].initialiser(element, arg))
+		return (0);
+	return (element->uuid);
 }
 
-void		gui_element_destroy(gui_element *element)
+int gui_element_update(gui_container *container, gui_element *element, void *arg)
 {
+	t_engine *eng = (t_engine *)arg;
+	v2ui elem_pos = gui_container_element_offset(container, element);
+	v2si mouse_pos = {eng->mouse_x, eng->mouse_y};
 
+	/* @todo: fix this shit Alan */
+	if (element->options & GUI_ELEM_OPT_SELECTABLE)
+	{
+		if (mouse_pos[_x] >= elem_pos[_x] && mouse_pos[_x] < elem_pos[_x] + element->size[_x]
+			&& mouse_pos[_y] >= elem_pos[_y] && mouse_pos[_y] < elem_pos[_y] + element->size[_y])
+		{
+			if (!(element->options & GUI_ELEM_OPT_IS_HOVERED))
+				gui_element_add_options(element, GUI_ELEM_OPT_IS_HOVERED);
+		}
+		else
+			gui_element_rem_options(element, GUI_ELEM_OPT_IS_HOVERED);
+	}
+
+	if (element->options & GUI_ELEM_OPT_BACKGROUND_VISIBLE)
+		ft_rect(eng, elem_pos, element->size, (t_color){0x566457});
+	if (element->options & GUI_ELEM_OPT_IS_HOVERED)
+	{
+		if (ft_mouse(eng, 1).hold)
+			ft_rect(eng, elem_pos, element->size, (t_color){0x566457 << 1});
+		else
+			ft_rect(eng, elem_pos, element->size, (t_color){0x978861});
+	}
+
+	int error = global_element_methods_table[element->type].updater(container, element, elem_pos, arg);
+
+	return (error);
 }
 
-
-void		gui_element_display(gui_element *element)
+void gui_element_destroy(gui_element *element)
 {
-
+	global_element_methods_table[element->type].destroyer(element);
 }
 
-void		gui_element_update(gui_element *element)
+gui_element_options gui_element_add_options(gui_element *gui_element, gui_element_options options)
 {
+	/*
+	 *	Some options will need to change some things in the element later.
+	 *	For example allocate memory for a specifique thing or resize an image...
+	 */
+	gui_element->options |= options;
 
+	return (gui_element->options);
+}
+
+gui_element_options gui_element_rem_options(gui_element *gui_element, gui_element_options options)
+{
+	/*
+	 *	Some options will need to change some things in the element later.
+	 *	For example allocate memory for a specifique thing or resize an image...
+	 */
+	gui_element->options &= ~options;
+
+	return (gui_element->options);
 }

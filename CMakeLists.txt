@@ -19,17 +19,32 @@ set(CMAKE_C_STANDARD 99)
 
 set(MAIN_PROG gui_test.out)
 add_executable(${MAIN_PROG})
-target_link_libraries(${MAIN_PROG} m)
-target_include_directories(${MAIN_PROG} PUBLIC
-	lib/inc/
-	inc/
+target_link_directories(${MAIN_PROG}
+	PUBLIC lib
+	PUBLIC engine
+	PUBLIC engine/minilibx-linux
 	)
-target_sources(${MAIN_PROG} PUBLIC
-	src/vec2f_test.c
-	
-	inc/gui/container.h
-	inc/math_vec/types.h
-	inc/math_vec/methodes.h
+target_link_libraries(${MAIN_PROG} m vector Xext X11 Xfixes engine)
+target_include_directories(${MAIN_PROG}
+	PUBLIC inc/
+	PUBLIC lib/inc/
+	PUBLIC engine/inc
+	)
+target_sources(${MAIN_PROG}
+	PUBLIC src/vec2f_test.c
 
-	lib/libvector.a
+	PUBLIC inc/random.h
+	PUBLIC src/random.c
+
+	PUBLIC inc/gui/container.h
+	PUBLIC src/gui/container.c
+
+	PUBLIC inc/gui/element.h
+	PUBLIC src/gui/element.c
+	PUBLIC inc/gui/methodes.h
+	PUBLIC src/gui/element/none.c
+	PUBLIC src/gui/element/text.c
+
+	PUBLIC inc/math_vec/types.h
+	PUBLIC inc/math_vec/methodes.h
 	)

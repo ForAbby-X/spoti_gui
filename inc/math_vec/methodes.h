@@ -28,7 +28,13 @@
  *	Alan De Freitas - 21:25 Sep 15 2024
  */
 
+/* * _V2 - macro * */
+// #define __v2_math(TYPE, OPX) ( TYPE##_##OPX )
+// #define _v2_math(OP, X) __v2_math(typeof(X), OP##X)
+
+
 /* * V2 - macro * */
+// #define v2_swap(X) _v2_math(swap, X)
 
 // #define v2_swap(vec) ({ (typeof((vec))){(vec)[1], (vec)[0]}; })
 
