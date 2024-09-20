@@ -20,6 +20,8 @@
 		"memory_resource": "c",
 		"type_traits": "c",
 		"element.h": "c",
-		"container_struct.h": "c"
+		"container_struct.h": "c",
+		"types.h": "c",
+		"initializer_list": "c"
 	}
 }

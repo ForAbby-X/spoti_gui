@@ -11,6 +11,11 @@
 },
 {
   "directory": "/projects/spoti_gui/build",
+  "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/gui/interaction_tools.c.o -c /projects/spoti_gui/src/gui/interaction_tools.c",
+  "file": "/projects/spoti_gui/src/gui/interaction_tools.c"
+},
+{
+  "directory": "/projects/spoti_gui/build",
   "command": "/usr/bin/cc  -I/projects/spoti_gui/inc -I/projects/spoti_gui/lib/inc -I/projects/spoti_gui/engine/inc -g -std=gnu99 -o CMakeFiles/gui_test.out.dir/src/gui/container.c.o -c /projects/spoti_gui/src/gui/container.c",
   "file": "/projects/spoti_gui/src/gui/container.c"
 },

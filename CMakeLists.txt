@@ -36,9 +36,10 @@ target_sources(${MAIN_PROG}
 	PUBLIC inc/random.h
 	PUBLIC src/random.c
 
+	PUBLIC inc/gui/interaction_tools.h
+	PUBLIC src/gui/interaction_tools.c
 	PUBLIC inc/gui/container.h
 	PUBLIC src/gui/container.c
-
 	PUBLIC inc/gui/element.h
 	PUBLIC src/gui/element.c
 	PUBLIC inc/gui/methodes.h

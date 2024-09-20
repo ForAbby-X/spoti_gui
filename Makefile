@@ -225,6 +225,30 @@ src/gui/element/text.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/element/text.c.s
 .PHONY : src/gui/element/text.c.s
 
+src/gui/interaction_tools.o: src/gui/interaction_tools.c.o
+.PHONY : src/gui/interaction_tools.o
+
+# target to build an object file
+src/gui/interaction_tools.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/interaction_tools.c.o
+.PHONY : src/gui/interaction_tools.c.o
+
+src/gui/interaction_tools.i: src/gui/interaction_tools.c.i
+.PHONY : src/gui/interaction_tools.i
+
+# target to preprocess a source file
+src/gui/interaction_tools.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/interaction_tools.c.i
+.PHONY : src/gui/interaction_tools.c.i
+
+src/gui/interaction_tools.s: src/gui/interaction_tools.c.s
+.PHONY : src/gui/interaction_tools.s
+
+# target to generate assembly for a file
+src/gui/interaction_tools.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_test.out.dir/build.make CMakeFiles/gui_test.out.dir/src/gui/interaction_tools.c.s
+.PHONY : src/gui/interaction_tools.c.s
+
 src/random.o: src/random.c.o
 .PHONY : src/random.o
 
@@ -294,6 +318,9 @@ help:
 	@echo "... src/gui/element/text.o"
 	@echo "... src/gui/element/text.i"
 	@echo "... src/gui/element/text.s"
+	@echo "... src/gui/interaction_tools.o"
+	@echo "... src/gui/interaction_tools.i"
+	@echo "... src/gui/interaction_tools.s"
 	@echo "... src/random.o"
 	@echo "... src/random.i"
 	@echo "... src/random.s"

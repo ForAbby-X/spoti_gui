@@ -13,8 +13,7 @@
 						| GUI_CONT_OPT_RESIZABLE \
 						| GUI_CONT_OPT_TITLE_BAR_VISIBLE \
 						| GUI_CONT_OPT_BACKGROUND_VISIBLE \
-						| GUI_CONT_OPT_INTERACTIVE \
-						| GUI_CONT_OPT_VISIBLE
+						| GUI_CONT_OPT_INTERACTIVE
 
 typedef int							gui_surface; // temporary place holder for compiling
 typedef struct gui_container		gui_container;
@@ -28,8 +27,9 @@ enum gui_container_options
 	GUI_CONT_OPT_TITLE_BAR_VISIBLE		= 1 << 2, // no title bar visible / interactive
 	GUI_CONT_OPT_BACKGROUND_VISIBLE		= 1 << 3, // is the container background visible ? if yes only see the title bar (prob. tool bar)
 	GUI_CONT_OPT_INTERACTIVE			= 1 << 4, // is the container clickable ? 
-	GUI_CONT_OPT_VISIBLE				= 1 << 5, // for empty void container (probably used for docking simplicity)
+	GUI_CONT_OPT_CLOSED					= 1 << 5, // for empty void container (probably used for docking simplicity)
 	GUI_CONT_OPT_GROW_ROW				= 1 << 6, // define if the container content can grow in row
+	GUI_CONT_OPT_SCROLLABLE				= 1 << 7, // define if we can scroll the container's content
 
 	GUI_CONT_OPT_LAST // here to compile error if too many options
 };
@@ -38,9 +38,8 @@ struct gui_container
 {
 	uint16_t				uuid;
 
-	v2si					position;
+	r2si					rect;
 	uint16_t				layer;
-	v2ui					size;
 
 	float					scroll_value; // dont know if float type is good
 	

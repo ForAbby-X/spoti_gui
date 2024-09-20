@@ -66,6 +66,8 @@ enum gui_element_type
 {
 	GUI_ELEM_NONE = 0,
 	GUI_ELEM_TEXT,
+	GUI_ELEM_MAX,
+	GUI_ELEM_COLOR,
 	GUI_ELEM_CHECK,
 	GUI_ELEM_BUTTON,
 	GUI_ELEM_LIST,
@@ -73,7 +75,6 @@ enum gui_element_type
 	GUI_ELEM_IMAGE,
 	GUI_ELEM_INPUT,
 
-	GUI_ELEM_MAX
 };
 
 enum gui_element_options
@@ -98,14 +99,14 @@ struct gui_element_color
 	t_color		color;
 };
 
-// with sui 32 bytes, with ui 40
+// structure padding with sui 32 bytes, with ui 40
 struct gui_element
 {
 	// uint16_t			group: 4; // Just thinking for a bit... or four... (funny !)
 	uint16_t			uuid;//: 12;
 
 	gui_element_type	type;
-	v2ui				size;
+	v2ui				dim;
 	gui_element_options	options;
 
 	union

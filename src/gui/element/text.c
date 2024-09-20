@@ -12,14 +12,17 @@ int _gui_elem_text_initialiser(gui_element *element, void *arg)
 
 
 	if (arg == NULL)
+	{
+		element->dim = (v2ui){7 + 5, 7 + 5}; // maybe change that
 		return (0);
+	}
 
-	element_text->text = strdup(arg); // should be text
+	element_text->text = strdup(arg);
 	if (element_text->text == NULL)
 		return (1);
 	element_text->text_length = strlen(arg);
 
-	element->size = (v2ui){element_text->text_length * 7 + 5, 7 + 5};
+	element->dim = (v2ui){element_text->text_length * 7 + 5, 7 + 5};
 	
 	element->options = 0;
 	gui_element_add_options(element, GUI_ELEM_OPT_VISIBLE | GUI_ELEM_OPT_SELECTABLE);
